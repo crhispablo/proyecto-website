@@ -1,9 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* fuente importada de googlefonts */
+/*fuente opens sans*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&y=swap');
+/* fuente roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* fuente importada de googlefonts Roboto - Open Sans */
 /* fuente raiz */
+
+/* Reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
-    font-size: 62, 5%;
+    font-size: 62. 5%;
 }
 
 /* agregar tipografia */
@@ -15,19 +25,41 @@ h3 {
 
 /* tamaños de fuente */
 h1 {
-    font-size: 4rem;
-}
-
-h2 {
     font-size: 3rem;
 }
 
-h3 {
+h2 {
     font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+/* Para el ancho maximo de las imagenes */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 header {
     background-color: #1A1A1A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+ul {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 15rem;
+    padding-top: 0.25rem;
+    padding-left: 2rem;
 }
 
 /* sacar bullets */
@@ -39,23 +71,28 @@ ul {
 a {
     color: #FFFFFF;
     text-decoration: none;
-    font-family: "Google Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 2rem;
 }
 
-
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
 
 body {
     background-color: #C5992E;
 }
 
 p {
-    font-family: "Google Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 2rem;
 }
 
 .stock {
-    font-family: "Google Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 2.5rem;
     font-weight: 600;
 }
@@ -66,8 +103,232 @@ p {
 }
 
 
+.sectionpar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+/* propiedades de flex*/
+.contenedortarjetas {
+    height: 40rem;
+    /*llamo propiedades*/
+    display: flex;
+    /* se aplica al padre de lo que quiero distribuir*/
+    flex-direction: row;
+    /* distribuye los elementos a lo largo del eje principal en este caso es horizontal por defecto row*/
+    justify-content: space-around;
+    /*distribuye los elementos sobre el eje secundario en este caso es vertical*/
+    align-items: center;
+    /*genera espacios flex*/
+    gap: 2.5rem;
+    margin-top: 1rem;
+}
+
+/* para aplicar esquinas redondeadas a una imagen*/
+.contenedortarjetas figure img {
+    border-radius: 25px;
+}
+
+.tarjetas {
+    width: 25rem;
+
+}
+
+
+/* SECCION PRODUCTOS */
+
+.sectionproductos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.contenedorproductos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.conjuntosdemotor {
+    width: 100%;
+    text-align: center;
+}
+
+.subconjuntosdemotor {
+    width: 100%;
+    text-align: center;
+}
+
+.contenedorproductos figure {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* separacion entre fotos*/
+    gap: 3rem;
+    width: 100%;
+}
+
+.contenedorproductos figure img {
+    flex: 1;
+    max-width: 320px;
+    height: 400px;
+    /* para aplicar esquinas redondeadas a una imagen*/
+    border-radius: 25px;
+}
+
+
+/* SECCION NOSOTROS */
+
+.sectionnosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.contenedornosotros {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.nosotros {
+    display: flex;
+    flex-direction: row-reverse;
+    /* Pone el <p> a la izquierda y el <figure> a la derecha */
+    flex-wrap: wrap;
+    /* Permite acomodarse si la pantalla es chica */
+    align-items: center;
+    /* Centra verticalmente el texto con la imagen */
+    justify-content: center;
+    gap: 2rem;
+    /* Espacio entre el texto y la foto */
+    max-width: 1000px;
+    width: 90%;
+    ;
+}
+
+/* El título queda arriba ocupando todo el ancho */
+.nosotros h2 {
+    width: 100%;
+    text-align: left;
+}
+
+/* Bloque del texto a la izquierda */
+.nosotros p {
+    flex: 1;
+    min-width: 280px;
+    line-height: 2.1;
+    font-size: 1.50rem;
+}
+
+/* Bloque de la imagen a la derecha */
+.nosotros figure {
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
+    margin: 0;
+    padding: 0;
+}
+
+.nosotros figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+
+/* SECCION GALERIA */
+
+.sectiongaleria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.contenedorgaleria {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.galeria {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* Permite que la 3ra y 4ta pasen a la 2da fila */
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 900px;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+}
+
+.galeria img {
+    /* 50% del ancho restando la mitad del espacio de separación (gap) */
+    width: calc(50% - 0.75rem);
+    height: 240px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.stock {
+    display: flex;
+    justify-content: center;
+}
+
+/* SECCION CONTACTO */
+.sectioncontacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.sectioncontacto h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contenedorcontacto {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contacto {
+    display: flex;
+}
+
 
 footer {
+    margin-top: 1rem;
     background-color: #1A1A1A;
     color: #FFFFFF;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .redes {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        width: 4rem;
+    }
 }

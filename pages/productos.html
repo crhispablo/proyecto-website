@@ -11,7 +11,10 @@
 <body>
     <!-- encabezado -->
     <header>
-        <img src="../assets/logoamarilloLM.png" alt="Logo de Luis Moreno S.A.">
+        <div class="logo">
+            <img src="../assets/logoamarilloLM.png" alt="Logo de Luis Moreno S.A.">
+        </div>
+
         <nav>
             <ul>
                 <li>
@@ -33,39 +36,45 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h1>Nuestros Productos</h1>
-            <article>
-                <h2>Conjuntos de Motor</h2>
-                <figure>
-                    <img src="../assets/CP754.jpg" alt="Presentacion conjunto de motor1">
-                    <img src="../assets/CP342.JPG" alt="Presentacion conjunto de motor2">
-                    <img src="../assets/CP197-5.JPG" alt="Presentacion conjunto de motor3">
-                </figure>
-            </article>
-            <article>
-                <h2>Subconjuntos de Motor</h2>
-                <figure>
-                    <img src="../assets/SP741.jpg" alt="Presentacion subconjunto de motor1">
-                    <img src="../assets/SP770.JPG" alt="Presentacion subconjunto de motor2">
-                    <img src="../assets/SP919.JPG" alt="Presentacion subconjunto de motor3">
-                </figure>
-            </article>
+        <section class="sectionproductos">
+            <h1>Nuestros Productos:</h1>
+            <div class="contenedorproductos">
+                <article class="conjuntosdemotor">
+                    <h2>Conjuntos de Motor</h2>
+                    <figure>
+                        <img src="../assets/CP754.jpg" alt="Presentacion conjunto de motor1">
+                        <img src="../assets/CP342.JPG" alt="Presentacion conjunto de motor2">
+                        <img src="../assets/CP197-5.JPG" alt="Presentacion conjunto de motor3">
+                    </figure>
+                </article>
+                <article class="subconjuntosdemotor">
+                    <h2>Subconjuntos de Motor</h2>
+                    <figure>
+                        <img src="../assets/SP741.jpg" alt="Presentacion subconjunto de motor1">
+                        <img src="../assets/SP770.JPG" alt="Presentacion subconjunto de motor2">
+                        <img src="../assets/SP919.JPG" alt="Presentacion subconjunto de motor3">
+                    </figure>
+                </article>
+            </div>
+
+
+
+
         </section>
     </main>
     <!-- pie -->
     <footer>
         <ul>
             <li>
-                <a href="https://www.tiktok.com/login" target="_blank"> <img src="../assets/tik-toklogo.png"
-                        alt="Logo Tik Tok"></a>
+                <a href="https://www.tiktok.com/login" target="_blank"> <img class="redes"
+                        src="../assets/tik-toklogo.png" alt="Logo Tik Tok"></a>
             </li>
             <li>
-                <a href="https://www.instagram.com/?hl=en" target="_blank"><img src="../assets/instagramlogo.png"
-                        alt="Logo Instagram"></a>
+                <a href="https://www.instagram.com/?hl=en" target="_blank"><img class="redes"
+                        src="../assets/instagramlogo.png" alt="Logo Instagram"></a>
             </li>
             <li>
-                <a href="https://wa.me/543489369798" target="_blank"><img src="../assets/whatsapplogo.png"
+                <a href="https://wa.me/543489369798" target="_blank"><img class="redes" src="../assets/whatsapplogo.png"
                         alt="Logo Whatsapp"></a>
             </li>
         </ul>
